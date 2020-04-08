@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  font-size: 32px;
+}
+
+body {
+  background: linear-gradient( #00103a 0%, #3e5f77 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  color:white;
+  height:100vh;
+  flex-direction: column;
+}
+
+body, html {
+  margin: 0;
+}
+
+.sky-container {
+  height:100%;
+  width:100%;
+}
+
+
+.star {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1px;
+  transform: rotate(25deg);
+  animation: shooting 6000ms ease-in-out infinite, shining 6000ms ease-in-out infinite; 
+  --left:80%;
+  --top: 70%;
+}
+
+.star:nth-child(2){
+  top:10%;
+  left:10%;
+  animation: shooting 4000ms ease-in-out infinite, shining 4000ms ease-in-out infinite; 
+  animation-delay:2000ms;
+  --left:50%;
+  --top: 50%;
+}
+.star:nth-child(3){
+  top:30%;
+  left:20%;
+  animation: shooting 4000ms ease-in-out infinite, shining 4000ms ease-in-out infinite; 
+  animation-delay:4000ms;
+  --left:60%;
+  --top: 80%;
+}
+
+
+@keyframes shining {
+  0% {
+    width: 0;
+    background-image: linear-gradient(to right, #2d67e6 , #2c63db);
+  }
+  50% {
+    width: 20px;
+    background-image: linear-gradient(to right, #326ff3 , #80a6f8);
+
+  }
+  85% {
+    width: 2px;
+    background-image: linear-gradient(to right, #155cf5 , #9fbdff);
+    box-shadow:none;
+  }
+  100% {
+    width: 0px;
+    background: #ffffff;
+    box-shadow: 0 0 8px 6px white;
+  }
+}
+
+@keyframes shooting {
+  100% {
+    left:var(--left);
+    top:var(--top);
+  }
+}
+
+.land{
+  background-color: transparent;
+  width:100%;
+  margin:0;
+  padding: 0;
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
+}
+
+
+.grass-mountain {
+  border-left: 6rem solid transparent;
+  border-right: 9rem solid transparent;
+  border-bottom: 3rem solid green;
+}
+
+.moon{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  /* box-shadow: 22px 1px 0px 0px #fff;   for crescent moon */
+}
+
+
