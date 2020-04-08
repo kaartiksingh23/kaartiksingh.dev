@@ -11,7 +11,7 @@ body {
   overflow: hidden;
   position: relative;
   color:white;
-  height:100vh;
+  height:100%;
   flex-direction: column;
 }
 
