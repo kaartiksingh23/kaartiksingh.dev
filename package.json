@@ -1,0 +1,28 @@
+{
+    "name": "kaartiksingh.dev",
+    "description": "Portfolio Of Kaartik Singh",
+    "version": "0.0.1",
+    "private": true,
+    "license": "Apache-2.0",
+    "author": "Google Inc.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git"
+    },
+    "engines": {
+      "node": ">=8.0.0"
+    },
+    "scripts": {
+    "start": "node app.js",
+      "test": "mocha --exit test/*.test.js"
+    },
+    "dependencies": {
+      "express": "^4.16.3",
+      "node-static": "^0.7.11"
+    },
+    "devDependencies": {
+      "mocha": "^7.0.0",
+      "supertest": "^4.0.2",
+      "node-static": "^0.7.11"
+    }
+  }
