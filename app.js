@@ -8,7 +8,7 @@ app.get('/music-app', function(req,res){
 });
 
 app.get('/weather-app', function(req,res){
-    res.sendFile(__dirname + '/projects/javascript-weather-App/'); 
+    res.sendFile(__dirname + '/projects/javascript-weather-app/'); 
 });
 
 app.listen(process.env.port || 8080);
