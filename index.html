@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kaartik Singh - Developer</title>
+    <title> Kaartik Singh - Interpreter </title>
+    <meta name=viewport content="height=device-height,width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/app.css" />
     <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
-    <script
-      src="https://kit.fontawesome.com/d8d5007472.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
   <body class="app">
-    <div class="sky-container">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="moon"></div>
+    <div class="header">
+      <ul class="header-link">
+        <li><a href="#landing-page">Home</a></li>
+        <li><a href="#projects">Projects</a></li> 
+      </ul>
     </div>
-    <div class="land">
-      <div class='grass-mountain'></div>
-      <div class='grass-mountain'></div>
-      <div class='grass-mountain'></div>
-      <div class='grass-mountain'></div>
-      <div class='grass-mountain'></div>
-      <div class='grass-mountain'></div>
+    <div id="landing-page" class="work-desk">
+      <div class="monitor-container">
+        <div class="monitor">
+          <div class="monitor-bessel">
+            <div class="monitor-screen">
+              <p id="monitor-screen-output"><span id="screen-output"></span><span id="screen-cursor">_</span></p>
+            </div>
+          </div>
+          <div class= "monitor-stand">
+
+          </div>
+          <div class="monitor-base">
+
+          </div>
+        </div>
+      </div>
+      <div class="desk-books">
+        <div><span>JS</span></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+    <div id="projects">
+      <div class="project-card">
+        <div class="title">Weather Application</div>
+        <div class="image">
+          <img src="./images/weather-app.png">
+        </div>
+        <p class="description"> This is a weather application</p>
+        <div class="link"><a href="./projects/javascript-weather-app/index.html">Click to view</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="title">Tap Music</div>
+        <div class="image">
+          <img src="./images/music-app.png">
+        </div>
+        <p class="description"> Make music with only one tap</p>
+        <div class="link"><a href="./projects/javascript-Music-App/index.html">Click to view</a></div>
+      </div>
+      
+    </div>
+    
   </body>
+  <script src="./index.js"></script>
 </html>

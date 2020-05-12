@@ -1,115 +1,272 @@
-* {
-  box-sizing: border-box;
-  font-size: 32px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
 
-body {
-  background: linear-gradient( #00103a 0%, #3e5f77 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  color:white;
-  height:100vh ;
-  flex-direction: column;
+a:visited{
+    color:black
 }
 
-body, html {
-  margin: 0;
+html{
+    scroll-behavior: smooth;
 }
 
-.sky-container {
-  height:80vh;
-  width:100%;
+body{
+    background-color: #fffff2;
+    height:100vh;
+    width:100vw;
+    cursor: url("../images/Sep080.svg") 10 12;
+}
+
+.header{
+    height:11%;
+    padding:1%;
+    text-align: right;
+    position:fixed;
+    box-shadow: 0px 0px 6px 0px;
+    width:100%;
+    background-color:#fffff2;
+    z-index:100;
+}
+.header-link{
+    width:100%;
+    height:100%;
+}
+
+.header-link ul {
+    vertical-align: middle;
+}
+
+.header-link li{
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Press Start 2P', cursive;
+    color:black;
+    font-size:1em;
+    display:inline-block;
+    cursor:pointer;
+    padding:1%;
+}
+
+.header-link li:hover{
+    border-bottom: 3px solid black
+}
+
+.header-link a {
+    text-decoration: none;
+    text-emphasis: none;
+}
+
+/* monitor CSS */
+
+.work-desk{
+    height:100%;
+}
+
+.monitor-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+.monitor{
+    font-size:16px;
+    width:46%;
+    height:55%;
+    line-height: 3em;
+    min-width:320px;
+}
+
+.monitor-bessel{
+    background-color: black;
+    width:60%;
+    height:60%;
+    padding:2%;
+    margin:0 auto;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+}
+
+.monitor-screen{
+    background-color: lightslategray;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    color:white;
+    text-align: center;
+    padding:5%;
+    font-family: 'Press Start 2P', cursive;
+    margin :auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monitor-stand{
+    background-color:rgb(66, 64, 64);
+    width:10%;
+    height:20%;
+    margin:0 auto;
+
+}
+
+.monitor-base{
+    background-color:rgb(53, 51, 51);
+    width:20%;
+    height:10%;
+    margin:0 auto;
+    transform: skew(-5deg);
+    border-radius: 10%;
+    box-shadow:10px 5px 5px lightgrey; 
+}
+
+#screen-cursor{
+    animation: cursorEffect 1s infinite
+}
+
+@keyframes cursorEffect{
+    0%,100%{ color: white}
+    50%{ color: transparent} 
+}
+
+/* books */
+
+@media screen and (max-width:959px){
+    .desk-books{
+        visibility: hidden;
+    }
+   
+    /* .header-link{
+        display:none;
+    } */
+
+}
+
+.desk-books{
+    height:10%;
+    width:4%;
+    position: relative;
+    left:30%;
+    bottom:34%;
 }
 
 
-.star {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 1px;
-  transform: rotate(25deg);
-  animation: shooting 6000ms ease-in-out infinite, shining 6000ms ease-in-out infinite; 
-  --left:80%;
-  --top: 70%;
+.desk-books div{
+    display:block;
+    width:100%;
+    height:5%;
+    margin:0.25%;
+    background: whitesmoke;
+    margin-top:0;
+    margin-bottom:0;
+    border-bottom: 1px solid lightgrey;
 }
 
-.star:nth-child(2){
-  top:10%;
-  left:10%;
-  animation: shooting 4000ms ease-in-out infinite, shining 4000ms ease-in-out infinite; 
-  animation-delay:2000ms;
-  --left:50%;
-  --top: 50%;
-}
-.star:nth-child(3){
-  top:30%;
-  left:20%;
-  animation: shooting 4000ms ease-in-out infinite, shining 4000ms ease-in-out infinite; 
-  animation-delay:4000ms;
-  --left:60%;
-  --top: 80%;
+.desk-books div:first-child {
+    background:#E9D54C;
+    border:none;
+    height:70%;
+    border-radius: 10%;
+    transform: skew(-9deg, -17deg);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-
-@keyframes shining {
-  0% {
-    width: 0;
-    background-image: linear-gradient(to right, #2d67e6 , #2c63db);
-  }
-  50% {
-    width: 20px;
-    background-image: linear-gradient(to right, #326ff3 , #80a6f8);
-
-  }
-  85% {
-    width: 2px;
-    background-image: linear-gradient(to right, #155cf5 , #9fbdff);
-    box-shadow:none;
-  }
-  100% {
-    width: 0px;
-    background: #ffffff;
-    box-shadow: 0 0 8px 6px white;
-  }
+.desk-books div:first-child span{
+    color: black
 }
 
-@keyframes shooting {
-  100% {
-    left:var(--left);
-    top:var(--top);
-  }
+.desk-books div:last-child{
+    background:#E9D54C;
+    border:none;
 }
 
-.land{
-  background-color: transparent;
-  height:20vh;
-  width:100%;
-  margin:0;
-  padding: 0;
-  display:flex;
-  justify-content:center;
-  overflow:hidden;
+/* Projects */
+
+#projects{
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
 
-
-.grass-mountain {
-  border-left: 6rem solid transparent;
-  border-right: 9rem solid transparent;
-  border-bottom: 3rem solid green;
+.project-card{
+    height:50%;
+    width:20%;
+    background-color: #fdfdc6;
+    border-radius: 12%;
+    box-shadow: 0px 0px 23px 3px;
+    
 }
 
-.moon{
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  width: 4rem;
-  height: 4rem;
-  background-color: white;
-  border-radius: 50%;
-  /* box-shadow: 22px 1px 0px 0px #fff;   for crescent moon */
+.project-card .image{
+    height:40%;
 }
 
+.project-card img{
+    width:100%;
+    height:100%;
+}
 
+.project-card .title{
+    height:20%;
+    padding:5%;
+    text-align: center;
+    font-size:1.2em;
+}
+
+.project-card .description {
+    height:30%;
+    padding:5%;
+    text-align: center;
+    font-size:0.7em;
+}
+
+.project-card .link{
+    text-align: center;
+    font-size: 0.75em;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px){
+    #projects{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project-card{
+        width:80%;
+        height:60%;
+        margin-bottom:3%;
+        border-radius:2%;
+        box-shadow: 0px 0px 13px 1px;
+    }
+
+    .project-card .title{
+        font-size:1.25rem;
+    }
+
+    .project-card .image{
+        width:50%;
+        margin:0 auto;
+    }
+
+    .monitor{
+        width:70%;
+        height:30%;
+    }
+
+    .header-link{
+        font-size: 0.75em;
+    }
+
+    .header {
+        height:5%;
+    }
+}
