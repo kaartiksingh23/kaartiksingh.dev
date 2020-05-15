@@ -15,4 +15,8 @@ app.get("/landing-page", function (req, res) {
   res.sendFile(__dirname + "/projects/responsive-laptop-marketing-page/");
 });
 
+app.get("/spooky-ghost", function (req, res) {
+  res.sendFile(__dirname + "/projects/spooky-ghost/");
+});
+
 app.listen(process.env.port || 8080);
